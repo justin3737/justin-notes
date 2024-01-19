@@ -1,5 +1,5 @@
 ---
-slug: vite-react-react-tailwind-css
+slug: vite-react-tailwind-css
 title: Vite React Tailwind CSS 開發筆記
 authors:
   name: Justin
