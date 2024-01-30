@@ -8,6 +8,8 @@ authors:
 tags: [fp, functional programming]
 ---
 
+可讀性、可預期、可重用
+
 ### 可讀性(Readability)
 
 FP 相較於 imperative programming (命令式程式設計) 有著更佳的可讀性，意味著：不僅可以減少犯錯機會，也讓讀程式碼的人，更舒服的理解該程式碼在處理什麼問題。

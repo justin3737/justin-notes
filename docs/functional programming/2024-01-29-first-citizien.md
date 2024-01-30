@@ -1,11 +1,11 @@
 ---
 slug: function-first-citizen
-title: 為什麼說函數是一等公民
+title: FP - 為什麼說函數是一等公民
 authors:
   name: Justin
   url: https://github.com/justin3737
   image_url: https://avatars.githubusercontent.com/u/3293292?s=400&u=0cf29916981c562345a57d34b7baa92e5816c863&v=4
-tags: [fp, functional programming]
+tags: [fp, functional programming, javascript]
 ---
 
 函式是一等公民，這是什麼意思？
