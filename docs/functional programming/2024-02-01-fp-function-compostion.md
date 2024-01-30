@@ -156,3 +156,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 ### 小結
 
 Function Composition 就像是樂高一樣，每塊樂高積木雖然只有單一形狀，但卻可以組出一個複雜的模型，而這個概念是 Functional Programming 的核心!
+
+#### Reference:
+
+- [Functional Programming 一文到底全紀錄](https://medium.com/%E4%B8%80%E5%80%8B%E5%B0%8F%E5%B0%8F%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/javascript-functional-programming-%E4%B8%80%E6%96%87%E5%88%B0%E5%BA%95%E5%85%A8%E7%B4%80%E9%8C%84-95ff19d9892)

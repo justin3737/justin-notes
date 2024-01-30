@@ -170,3 +170,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .then(console.log)
   .catch(console.error);
 ```
+
+#### Reference:
+
+- 關於`point free` 可以參考[Pointfree 编程风格指南](https://www.ruanyifeng.com/blog/2017/03/pointfree.html)
