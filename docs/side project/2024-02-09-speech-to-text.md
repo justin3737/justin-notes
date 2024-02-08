@@ -10,7 +10,7 @@ tags: ["python", "whisper", "chatgpt", "side project"]
 
 ### 需求
 
-可以將`Youtube`影片或是任何聲音`mp3`轉回文字檔案，再透過 ChatGPT 做文字的整理重點摘錄，適用於會議紀錄或是獲取新知。
+使用 `Whisper API` 可以將`Youtube`影片或是任何聲音`mp3`轉回文字檔案，再透過 ChatGPT 做文字的整理重點摘錄，適用於會議紀錄或是獲取新知。
 
 ### 使用技術
 
@@ -166,5 +166,9 @@ for t in transcript_ary:
     )
 
     result_ary.append(completion.choices[0].message)
-
+print(result_ary)
 ```
+
+### 結論
+
+- 使用 `Whisper API` 可以將`Youtube`影片或是任何聲音`mp3`轉回文字檔案，再透過 ChatGPT 做文字的整理重點摘錄，適用於會議紀錄或是獲取新知。
