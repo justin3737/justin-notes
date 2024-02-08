@@ -8,7 +8,9 @@ authors:
 tags: ["python", "whisper", "chatgpt", "side project"]
 ---
 
-### 需求
+### 原因與訴求
+
+最近同事遇到一些困難，希望能夠快速整理訪談的逐字稿或會議紀錄，於是讓我有了些靈感：
 
 使用 `Whisper API` 可以將`Youtube`影片或是任何聲音`mp3`轉回文字檔案，再透過 ChatGPT 做文字的整理重點摘錄，適用於會議紀錄或是獲取新知。
 
@@ -20,7 +22,7 @@ tags: ["python", "whisper", "chatgpt", "side project"]
 
 ### 開發
 
-#### 指定 ChatGPT Token
+指定 ChatGPT Token
 
 ```python
 TOKEN = ''
