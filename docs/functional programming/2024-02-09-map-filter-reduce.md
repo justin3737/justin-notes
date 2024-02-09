@@ -38,7 +38,7 @@ console.log(result);
 
 ### Reduce
 
-[Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)一樣是 Javascript 中原生支援的方法，這個方法與前兩者有著極大的區別。Reduce 接受兩個參數 `callback function` 與 `initial function`。
+[Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)一樣是 Javascript 中原生支援的方法，這個方法與前兩者有著極大的區別。
 
 #### reduce 的基礎語法
 
