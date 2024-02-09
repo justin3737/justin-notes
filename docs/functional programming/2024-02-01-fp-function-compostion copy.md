@@ -5,7 +5,7 @@ authors:
   name: Justin
   url: https://github.com/justin3737
   image_url: https://avatars.githubusercontent.com/u/3293292?s=400&u=0cf29916981c562345a57d34b7baa92e5816c863&v=4
-tags: [fp, functional programming]
+tags: [fp, functional programming, javascript]
 ---
 
 函數可以任意組合得到新的 Function：把多個功能單一的函式組合成一個複雜的程式。
