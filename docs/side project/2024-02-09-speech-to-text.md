@@ -10,7 +10,9 @@ tags: ["python", "whisper", "chatgpt", "side project"]
 
 ### 原因與訴求
 
-最近同事遇到一些困難，希望能夠快速整理訪談的逐字稿或會議紀錄，於是讓我有了些靈感：
+在閒聊時發現同事遇到一些困難點，剛好最近我有在研究生程式 AI 相關議題，剛好有機會可以協助同事提高其生產力，且避免消耗精力去做一些繁瑣的工作：目的與訴求是希望能夠快速整理訪談的逐字稿或會議紀錄。
+
+#### 於是讓我有了些靈感：
 
 使用 `Whisper API` 可以將`Youtube`影片或是任何聲音`mp3`轉回文字檔案，再透過 ChatGPT 做文字的整理重點摘錄，適用於會議紀錄或是獲取新知。
 
@@ -57,7 +59,7 @@ import yt_dlp
 ydl_opts = {
     'format': 'bestaudio/best',
     'ffmpeg_location':'/opt/homebrew/bin/ffmpeg', // 需要指定 ffmpeg 路徑
-    'outtmpl': 'joeman',
+    'outtmpl': '<FileName>',
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
