@@ -50,18 +50,6 @@ const isEven = (val) => val % 2 === 0;
 // 乘以二
 const double = (val) => val * 2;
 
-// curry function
-const curry =
-  (fn) =>
-  (...args) =>
-    args.length >= fn.length ? fn(...args) : curry(fn.bind(null, ...args));
-
-// compose function
-const compose =
-  (...fns) =>
-  (initialValue) =>
-    fns.reduceRight((acc, fn) => fn(acc), initialValue);
-
 // data
 const arr = [1, 2, 3, 4, 5];
 
@@ -79,7 +67,7 @@ console.log(filterAanDouble(arr));
 // [4,8];
 ```
 
-詳情可以見[curry()](https://justin-notes.vercel.app/docs/functional%20programming/fp-currying)、 [compose()](https://justin-notes.vercel.app/docs/functional%20programming/fp-composition) 用法。
+詳細用法可以參考：[curry()](/docs/functional%20programming/fp-currying)、 [compose()](/docs/functional%20programming/fp-composition)
 
 ### 可預期(Predictability)
 
