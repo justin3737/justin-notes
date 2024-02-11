@@ -38,7 +38,7 @@ View --> Action --> Dispatch --> Reducer --> 更新View
 ### 先以簡單的加減數字使用 useReducer 表示
 
 ```javascript
-// hooks
+// reducer: 數字加減的邏輯寫在這裡
 const defaultReducer = (state, action) => {
   switch (action.type) {
     case "increment":
@@ -50,6 +50,7 @@ const defaultReducer = (state, action) => {
   }
 };
 
+// 組裝成 hooks 提供給頁面使用
 const useCounter = (reducer = defaultReducer, initialCount = 0) => {
   const [count, dispatch] = useReducer(reducer, initialCount);
   const onIncrement = useCallback(() => {
