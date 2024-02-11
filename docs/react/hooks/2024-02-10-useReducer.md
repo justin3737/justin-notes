@@ -37,7 +37,7 @@ View --> Action --> Dispatch --> Reducer --> 更新View
 
 ### 先以簡單的加減數字使用 useReducer 表示
 
-這裡先定義一個預設的邏輯 default router
+這裡先定義一個預設的邏輯 `defaultReducer`，接著組裝成 `hooks` 提供給頁面使用。
 
 ```javascript
 // Step:1 reducer: 數字加減的邏輯寫在這裡
