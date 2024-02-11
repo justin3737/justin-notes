@@ -88,7 +88,8 @@ const CounterPage = () => {
 除此之外的 `action type` 我們用上面定義的 `defaultReducer` 來處理。
 
 ```javascript
-const maxReducer = (state, action) => {
+// Step1: 這裡定義新的邏輯
+const maxminReducer = (state, action) => {
   switch (action.type) {
     case "increment":
       return Math.max(state + 1, 5);
@@ -97,6 +98,19 @@ const maxReducer = (state, action) => {
     default
       return defaultReducer(state, action)
   }
+};
+
+// Step:2 page中使用 hooks:
+const CounterPage = () => {
+  //這裏傳入 reducer
+  const { count, onIncrement, onDecrement } = useCounter(maxminReducer);
+  return (
+    <section>
+      <h1>{count}</h1>
+      <button onClick={onIncrement}>onIncrement</button>
+      <button onClick={onDecrement}>onDecrement</button>
+    </section>
+  );
 };
 ```
 
