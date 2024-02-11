@@ -70,3 +70,4 @@ const { isLoading, isError, isSuccess, data } = useQuery(["users"], getUsers, {
 ### Reference:
 
 - [Why cacheTime in React Query should always be bigger than staleTime](https://www.codemzy.com/blog/react-query-cachetime-staletime)
+- [React Query V5](https://tanstack.com/query/latest/docs/framework/react/guides/queries)
