@@ -30,18 +30,17 @@ What’s React Query? React Query 是一個很適合用於 React Hook 的 Librar
 #### Provider 建置
 
 ```javascript
-
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();
 const App = () => {
-	return {
-		<QueryClientProvider client={queryClient}>
-			<div className="app">
-				{//... pages here }
-			</div>
-		</QueryClientProvider>
-	}
+  return {
+    <QueryClientProvider client={queryClient}>
+      <div className="app">
+      {/*... pages here */}
+      </div>
+    </QueryClientProvider>
+  }
 }
 ```
 
