@@ -37,8 +37,10 @@ View --> Action --> Dispatch --> Reducer --> 更新View
 
 ### 先以簡單的加減數字使用 useReducer 表示
 
+這裡先定義一個預設的邏輯 default router
+
 ```javascript
-// reducer: 數字加減的邏輯寫在這裡
+// Step:1 reducer: 數字加減的邏輯寫在這裡
 const defaultReducer = (state, action) => {
   switch (action.type) {
     case "increment":
@@ -50,7 +52,7 @@ const defaultReducer = (state, action) => {
   }
 };
 
-// 組裝成 hooks 提供給頁面使用
+// Step:2 組裝成 hooks 提供給頁面使用
 const useCounter = (reducer = defaultReducer, initialCount = 0) => {
   const [count, dispatch] = useReducer(reducer, initialCount);
   const onIncrement = useCallback(() => {
@@ -66,7 +68,7 @@ const useCounter = (reducer = defaultReducer, initialCount = 0) => {
   };
 };
 
-// page:
+// Step:3 page中使用 hooks:
 const CounterPage = () => {
   const { count, onIncrement, onDecrement } = useCounter();
   return (
@@ -78,3 +80,26 @@ const CounterPage = () => {
   );
 };
 ```
+
+### 定義新的 reducer，特殊的邏輯寫可以在這裡
+
+比如我希望數字 最大值 5 最小值為 0，上面的 `defaultReducer` 是沒有限制數字的上下限。
+我們用 `Math.max()` 與 `Math.min()` 函式來決定最大值跟最小值。
+除此之外的 `action type` 我們用上面定義的 `defaultReducer` 來處理。
+
+```javascript
+const maxReducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return Math.max(state + 1, 5);
+    case "decrement":
+      return Math.min(state -1, 0);
+    default
+      return defaultReducer(state, action)
+  }
+};
+```
+
+### 結論：
+
+- `useReducer` 這樣的 design pattern 可以方便抽換各種不同的商業邏輯，也讓後續程式碼維護可以更加輕鬆。
