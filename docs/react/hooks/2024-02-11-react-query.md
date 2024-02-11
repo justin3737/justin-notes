@@ -67,7 +67,13 @@ const { isLoading, isError, isSuccess, data } = useQuery(["users"], getUsers, {
 - `staleTime` 是從 Server 獲取資料過時之前的時間長度。 React Query 中的預設值是 staleTime: 0 - 這表示您的資料立即過時！
 - `cacheTime` 是從快取中刪除非活動資料之前的時間長度。 React Query 中的預設值為 cacheTime: 300000 - 即 5 分鐘。
 
+### React Query Keys
+
+### useMutation
+
 ### Reference:
 
+- [React Query 介紹](https://medium.com/@weiyun0912/react-query-%E4%BB%8B%E7%B4%B9-e97b8c9e7823)
 - [Why cacheTime in React Query should always be bigger than staleTime](https://www.codemzy.com/blog/react-query-cachetime-staletime)
-- [React Query V5](https://tanstack.com/query/latest/docs/framework/react/guides/queries)
+- [React Query v5](https://tanstack.com/query/latest/docs/framework/react/guides/queries)
+- [React Query keys v5](https://tanstack.com/query/latest/docs/framework/react/guides/query-keys)
