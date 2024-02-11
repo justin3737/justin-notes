@@ -79,6 +79,9 @@ const config: Config = {
         },
       ],
     },
+    mermaid: {
+      theme: { light: "neutral", dark: "forest" },
+    },
     footer: {
       style: "dark",
       copyright: `Copyright © ${new Date().getFullYear()} by Justin, Inc. Built with Docusaurus.`,
