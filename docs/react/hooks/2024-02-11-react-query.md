@@ -8,14 +8,16 @@ authors:
 tags: [react, hooks, react-query]
 ---
 
+### Why React Query ?
+
+React 在 data fetch 上是較不方便的，不依靠第三方工具來處理資料的話，以下的功能需經過複雜的處理才有辦法達成：global state、success or error status、cache、background updating…。
+
+[為什麼不應該在 React 中直接使用 useEffect 從 API 中直接獲取數據](https://blog.skk.moe/post/why-you-should-not-fetch-data-directly-in-use-effect/)
+
 ### React Query V3 簡易說明及使用
 
 What’s React Query? React Query 是一個很適合用於 React Hook 的 Library
 他可以幫我們取得、同步、更新、緩存我們的遠端數據，可以更好的處理 Server 端的 State
-
-### Why React Query ?
-
-[為什麼不應該在 React 中直接使用 useEffect 從 API 中直接獲取數據](https://blog.skk.moe/post/why-you-should-not-fetch-data-directly-in-use-effect/)
 
 #### 原理：
 
