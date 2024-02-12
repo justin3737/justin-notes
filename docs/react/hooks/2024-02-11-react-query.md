@@ -52,18 +52,49 @@ const App = () => {
 
 #### Basic Usage
 
+useQuery 所需要的參數有兩個，一個是鍵值名稱，另一個則是 `data fetching` 的 `function`。
+
 ```javascript
 import { useQuery } from "react-query";
 
-// 建立基本查詢的function getUsers
+// Step 1: 建立基本查詢的function getUsers
 const getUsers = async () => {
   const response = await fetch("XXX.url.com/users");
   const data = await response.data();
   return data;
 };
+
+// Step 2:
 // 使用 useQuery, getUsers 放到第二個參數
 // 除了拿到 data 以外 還有提供 isLoading isError isSuccess 等各種狀態
 const { isLoading, isError, isSuccess, data } = useQuery(["users"], getUsers);
+```
+
+#### 機制
+
+如果 fetch 的 data 有問題(網址打錯、提供錯誤參數等)，React Query 會自動 retry(refetch)三次，三次都取得不到 data 的話則會顯示 error。
+另外，React Query 也有 Window Refocus Refetching 的功能，意思是當瀏覽器切換到其他分頁再切換回來時，會重新 Fetch data。
+
+### React Query Dev Tools
+
+React Query 也有提供開發管理工具 React Query Dev Tools
+
+```javascript
+import ReactDOM from "react-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
+
+ReactDOM.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 ```
 
 ### React Query Keys
