@@ -16,6 +16,18 @@ tags: ["python", "whisper", "chatgpt", "side project"]
 
 使用 `Whisper API` 可以將`Youtube`影片或是任何聲音`mp3`轉回文字檔案，再透過 ChatGPT 做文字的整理重點摘錄，適用於會議紀錄或是獲取新知。
 
+以下是步驟：
+
+1. 生成 API 的秘密金鑰（Secret Key）
+2. 使用 yt-dlp 下載 YouTube 影片的音頻檔案
+3. 使用 pydub 將長影片分割成多個小檔案
+4. 使用 Whisper API 將影片轉換為文字
+5. 使用 ChatGPT API 將文字轉換為摘要
+   使用 AI 摘要影片有很多好處。首先，可以省去
+   觀看影片的時間・其次，使用 AI 摘要可以更準
+   確地捕捉影片中的重點。最後，由於這兩個 API 的收費都很便宜，每 1000 個 ChatGPT Token 僅價格為 0.002 美元，使用 Whisper 轉換一小時的影片僅價格約為 10 元台幣，使用它們來摘要影片不會對預算造成負擔。這是一個非常簡單而且有效的方法來節省時間和精力，同時還可以
+   利用 AI 提供的智能功能創造更多有趣的應用。
+
 ### 使用技術
 
 - Python (Jupyter Notebook)
