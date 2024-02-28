@@ -2,14 +2,14 @@
 
 ## 筆記種類
 
-1. React（react）
+1. Side Project
+2. React（react）
    - UI Library
    - Zustand
    - React hook form
-2. Functional programing (FP)
-3. JavaScript（javascript）
-4. TypeScript（typescript）
-5. Side Project
+3. Functional programing (FP)
+4. JavaScript（javascript）
+5. TypeScript（typescript）
 6. CSS (css)
 7. MongoDB
 8. LeetCode
