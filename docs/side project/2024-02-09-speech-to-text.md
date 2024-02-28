@@ -8,7 +8,7 @@ authors:
 tags: ["python", "whisper", "chatgpt", "side project"]
 ---
 
-![](/img/docs/side-project/introducing-chatgpt-and-whisper-apis.webp)
+![](/img/docs/side-project/speech-to-text.png)
 
 ### 原因與訴求
 
