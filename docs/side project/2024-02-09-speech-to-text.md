@@ -10,7 +10,7 @@ tags: ["python", "whisper", "chatgpt", "side project"]
 
 ![](/img/docs/side-project/speech-to-text.jpeg)
 
-### 原因與訴求
+### 關於此 Side Project
 
 在閒聊時發現同事遇到一些困難點，剛好最近我有在研究生程式 AI 相關議題，剛好有機會可以協助同事提高其生產力，且避免消耗精力去做一些繁瑣的工作：目的與訴求是希望能夠快速整理訪談的逐字稿或會議紀錄。
 
