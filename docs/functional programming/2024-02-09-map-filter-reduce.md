@@ -59,6 +59,7 @@ Array.reduce(
 
 簡單的範例：
 
+#### 1. 計算最大值
 ```javascript
 const arr = [1, 2, 3, 4];
 const initVal = 0;
@@ -75,3 +76,63 @@ console.log(result);
 | 1           | 1           | 2             | 3            |
 | 2           | 3           | 3             | 6            |
 | 3           | 6           | 4             | 10           |
+
+#### 2. 將陣列中重複的元素去除
+
+```javascript
+const numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+const uniqueNumbers = numbers.reduce((acc, current) => {
+  if (!acc.includes(current)) {
+    acc.push(current);
+  }
+  return acc;
+}, []);
+console.log(uniqueNumbers); // [1, 2, 3, 4]
+```
+
+#### 3. 計算每個元素出現的次數
+
+```javascript
+const numbers = [1, 2, 3, 2, 2, 3, 3, 4, 2, 4];
+const count = numbers.reduce((acc, current) => {
+  if (acc[current]) {
+    acc[current] += 1;
+  } else {
+    acc[current] = 1;
+  }
+  return acc;
+}, {});
+console.log(count); // {1: 1, 2: 4, 3: 3, 4: 2}
+```
+
+#### 4. 將二維陣列攤平
+
+```javascript
+const arrays = [[1, 2], [3, 4], [5, 6]];
+const flattened = arrays.reduce((acc, current) => acc.concat(current), []);
+console.log(flattened); // [1, 2, 3, 4, 5, 6]
+```
+
+#### 5. 根據物件中的某個屬性進行分組
+
+```javascript
+const data = [
+  { id: 1, category: 'A' },
+  { id: 2, category: 'B' },
+  { id: 3, category: 'A' },
+  { id: 4, category: 'C' },
+  { id: 5, category: 'B' }
+];
+
+const groupedData = data.reduce((acc, current) => {
+  (acc[current.category] = acc[current.category] || []).push(current);
+  return acc;
+}, {});
+
+console.log(groupedData);
+// {
+//   A: [{ id: 1, category: 'A' }, { id: 3, category: 'A' }],
+//   B: [{ id: 2, category: 'B' }, { id: 5, category: 'B' }],
+//   C: [{ id: 4, category: 'C' }]
+// }
+```
